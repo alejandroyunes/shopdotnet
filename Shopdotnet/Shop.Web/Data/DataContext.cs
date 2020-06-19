@@ -4,7 +4,7 @@
 namespace Shop.Web.Data
 {
     using Microsoft.EntityFrameworkCore;
-    using Shop.Web.Entities;
+    using Entities;
 
     public class DataContext : DbContext
     {

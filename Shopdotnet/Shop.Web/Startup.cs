@@ -30,6 +30,9 @@ namespace Shop.Web
                 cfg.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });
 
+            services.AddTransient<SeedDb>();
+
+            services.AddScoped<IRepository, Repository>();
 
             services.AddControllersWithViews();
         }
