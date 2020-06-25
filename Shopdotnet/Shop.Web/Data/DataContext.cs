@@ -1,7 +1,4 @@
-﻿
-
-
-namespace Shop.Web.Data
+﻿namespace Shop.Web.Data
 {
     using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore;

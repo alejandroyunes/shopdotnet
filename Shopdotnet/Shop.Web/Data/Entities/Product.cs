@@ -19,6 +19,19 @@ namespace Shop.Web.Entities
 
         [Display(Name = "Image")]
         public string ImageUrl { get; set; }
+        public string ImageFullPath
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(this.ImageUrl))
+                {
+                    return null;
+                }
+
+                return $"https://shopzulu.azurewebsites.net{this.ImageUrl.Substring(1)}";
+            }
+        }
+
 
         [Display(Name = "Last Purchase")]
         public DateTime? LastPurchase { get; set; }
