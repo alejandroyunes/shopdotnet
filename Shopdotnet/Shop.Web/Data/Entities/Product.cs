@@ -28,9 +28,10 @@ namespace Shop.Web.Entities
                     return null;
                 }
 
-                return $"https://shopzulu.azurewebsites.net{this.ImageUrl.Substring(1)}";
+                return $"https://shopwebkutulu.azurewebsites.net{this.ImageUrl.Substring(1)}";
             }
         }
+
 
 
         [Display(Name = "Last Purchase")]
@@ -46,6 +47,8 @@ namespace Shop.Web.Entities
         public double Stock { get; set; }
 
         public User User { get; set; }
+
+
     }
 
 }

@@ -10,6 +10,7 @@ namespace Shop.Web.Controllers
     using Shop.Web.models;
     using System;
     using System.IO;
+    using System.Linq;
     using System.Threading.Tasks;
 
     public class ProductsController : Controller
@@ -27,7 +28,7 @@ namespace Shop.Web.Controllers
         // GET: Products
         public IActionResult Index()
         {
-            return View(this.productRepository.GetAll());
+            return View(this.productRepository.GetAll().OrderBy( p => p.Name));
         }
 
         // GET: Products/Details/5
@@ -131,7 +132,6 @@ namespace Shop.Web.Controllers
                 Price = product.Price,
                 Stock = product.Stock,
                 User = product.User
-
             };
         }
 
